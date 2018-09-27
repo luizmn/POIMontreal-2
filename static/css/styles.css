@@ -1,3 +1,5 @@
+/*---- General style ----*/
+
 #map {
     bottom: 0px;
     height: 100%;
@@ -6,6 +8,42 @@
     right: 0px;
     z-index: -1;
 }
+
+.sidenav {
+    height: 100%;
+    width: 180px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background: #444760;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+.sidenav a {
+    padding: 4px 8px;
+    text-decoration: none;
+    font-size: 15px;
+    color: #D0D0D1;
+    display: block;
+}
+
+.sidenav a:hover {
+    color: #EF5858;
+}
+
+.visit-list span:hover {
+    color: #EF5858;
+}
+
+.visit-list {
+    text-decoration: none;
+    font-size: 14px;
+    font-family: 'Ruda';
+    cursor: pointer;
+}
+
 
 /*---- Collapsible Sidebar ----*/
 
@@ -161,6 +199,7 @@
         margin-right: 0 !important
     }
 }
+
 /* Customize Google Maps InfoWindow */
 .card {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);

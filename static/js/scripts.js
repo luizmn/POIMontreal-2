@@ -11,6 +11,10 @@ function sidebar_close() {
 var map;
 var markers = ko.observableArray();
 
+// Define the variables to label the markers
+var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+var labelIndex = 0;
+
 // Get info from foursquare using the venue_id hardcoded in locations array
 // Foursquare credentials
 var foursquare_url;
@@ -22,17 +26,17 @@ var fs_client_id = "YHMKWSBNT41RJFB5LLCA3WA3BJNMZDKZICQ0V02UD0O0KAZH";
 function fsSearch(venueId, infowindow) {
     // Get information using venue id as the main parameter
     // use this on production
-    foursquare_url = "https://api.foursquare.com/v2/venues/" +
+    /*foursquare_url = "https://api.foursquare.com/v2/venues/" +
     venueId +
     "?v=20180922&client_id=" +
     fs_client_id +
     "&client_secret=" +
-    fs_client_secret;
+    fs_client_secret;*/
 
 
-    //foursquare_url = "https://api.foursquare.com/v2/venues/" +
-    //pos +
-    //"?v=20180922&oauth_token=GXAGYHX5KE3JEPUGVPNDWTBZJ4DCUCYBCSTVZGSYIDUED1TU";
+    foursquare_url = "https://api.foursquare.com/v2/venues/" +
+    venueId +
+    "?v=20180922&oauth_token=GXAGYHX5KE3JEPUGVPNDWTBZJ4DCUCYBCSTVZGSYIDUED1TU";
 
 
     $.getJSON(foursquare_url)
@@ -156,6 +160,42 @@ var locations = [{
                  },
                  fs_id: '4d49a48c11a36ea8d8082a1c',
                  zindex: 10
+                 },
+                 {
+                 title: 'Jean-Talon Market',
+                 location: {
+                 lat: 45.536465,
+                 lng: -73.614671
+                 },
+                 fs_id: '4adb6d0ef964a520522721e3',
+                 zindex: 11
+                 },
+                 {
+                 title: 'Montreal Holocaust Museum',
+                 location: {
+                 lat: 45.489022,
+                 lng: -73.636366
+                 },
+                 fs_id: '4ad4c06cf964a52024fa20e3',
+                 zindex: 12
+                 },
+                 {
+                 title: 'Museum of Archaeology and History',
+                 location: {
+                 lat: 45.502651,
+                 lng: -73.554167
+                 },
+                 fs_id: '4ad4c06cf964a520faf920e3',
+                 zindex: 13
+                 },
+                 {
+                 title: 'Centre d Histoire de Montreal',
+                 location: {
+                 lat: 45.50102,
+                 lng: -73.555528
+                 },
+                 fs_id: '4ad4c06cf964a52023fa20e3',
+                 zindex: 14
                  }
                  ];
 
@@ -198,7 +238,7 @@ function googleMapsCustomError(){
 
 // ------End Google Maps Callback-------
 
-
+// Create the markers and insert into an array
 var markersList = function(locations) {
     var self = this;
     this.title = locations.title;
@@ -207,11 +247,12 @@ var markersList = function(locations) {
     this.visible = ko.observable(true);
 
 
-    // Create a marker per location, and put into markers array
+
     this.marker = new google.maps.Marker({
                                          position: this.position,
                                          title: this.title,
                                          fs_id: this.fs_id,
+                                         label: labels[labelIndex++ % labels.length],
                                          animation: google.maps.Animation.DROP
                                          });
 
@@ -267,7 +308,7 @@ function toggleBounce(poi) {
     }
 }
 
-
+// Main view model.
 var viewApp = function() {
     var self = this;
 
