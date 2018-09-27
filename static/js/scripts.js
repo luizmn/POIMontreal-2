@@ -203,7 +203,6 @@ var locations = [{
 
 // ------Begin Google Maps Callback-------
 function initMap() {
-
     map = new google.maps.Map(document.getElementById('map'), {
                               zoom: 11,
                               center: {
@@ -219,26 +218,31 @@ function initMap() {
                               scaleControl: true,
                               fullscreenControl: true
                               });
+
     // Display an alert if Google maps encounters an error
     window.gm_authFailure = function() {
         alert('Error detected on Google Maps!');
     }
 
+    // Create the infowindow with no content but a fixed width
     infowindow = new google.maps.InfoWindow({
                                             content: '',
                                             maxWidth: 200
                                             });
+    // Set map bounds
     bounds = new google.maps.LatLngBounds();
     ko.applyBindings(new viewApp());
 }
 
+// Display an alert if Google maps encounters a custom error
 function googleMapsCustomError(){
     alert('Google Maps custom error triggered');
 }
 
 // ------End Google Maps Callback-------
 
-// Create the markers and insert into an array
+// Create the markers with labels from A to Z
+// and insert into an array
 var markersList = function(locations) {
     var self = this;
     this.title = locations.title;
