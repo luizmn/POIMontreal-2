@@ -44,6 +44,10 @@
     cursor: pointer;
 }
 
+.center {
+        text-align: center;
+        margin: auto;
+    }
 
 /*---- Collapsible Sidebar ----*/
 

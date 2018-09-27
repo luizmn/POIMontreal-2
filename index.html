@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,14 +9,14 @@
         <link href="https://fonts.googleapis.com/css?family=Ruda" rel="stylesheet">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
     </head>
     <title>Discover Montreal</title>
     <body>
         <div class="plc-sidebar plc-bar-block plc-collapse plc-card plc-animate-left" style="width:200px;" id="placesSidebar">
             <button class="plc-bar-item plc-button plc-large plc-hide-large" onclick="sidebar_close()">Close &times;</button>
-            <h1>
-                <span><img src="static/img/canadaflag.png"></span> Discover Montreal
+            <h1 class="center">
+                <span><img src="static/img/canadaflag.png"></span>
+                <br>Discover Montreal
             </h1>
             <div>
                 <div class="visitList"></div>
@@ -27,18 +26,14 @@
                             <th>
                                 Filter list
                                 <form role="search">
-                                    <div class="input-group">
-                                        <input type="text" class="form-control" placeholder="Type here..." name="q" data-bind="textInput: searchItem, valueUpdate: 'afterkeydown'">
-                                            <div class="input-group-btn">
-                                                <button class="btn btn-default"><i class="glyphicon glyphicon-search"></i></button>
-                                            </div>
-                                            </div>
+                                    <div>
+                                        <input type="text" placeholder="Type here..." name="q" data-bind="textInput: searchItem, valueUpdate: 'afterkeydown'">
+                                    </div>
                                 </form>
-
                             </th>
                         </tr>
                     </thead>
-                    <tbody class="visit-list" data-bind="foreach: locationList" class="sidenav" >
+                    <tbody class="visit-list" data-bind="foreach: locationList">
                         <tr>
                             <td>
                                 <span data-bind="text: marker.label"></span> - <span data-bind="text: title, click: show"></span>
@@ -55,7 +50,6 @@
             <div class="plc-container">
                 <div id="map" class="main"></div>
             </div>
-
         </div>
         <!-- Google Maps call -->
         <script async defer src="https://maps.googleapis.com/maps/api/js?libraries=places,geometry,drawing&key=AIzaSyC0yETbiVxEEaqblVWnkEiCibu2ieQSDwE&v=3.20&callback=initMap">
@@ -67,5 +61,4 @@
         <script type="text/javascript" src="static/js/utils.js"></script>
         <script type="text/javascript" src="https://knockoutjs.com/downloads/knockout-3.4.2.debug.js"></script>
     </body>
-
 </html>
