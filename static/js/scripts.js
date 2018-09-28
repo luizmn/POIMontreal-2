@@ -231,7 +231,8 @@ function initMap() {
                                             });
     // Set map bounds
     bounds = new google.maps.LatLngBounds();
-    ko.applyBindings(new viewApp());
+    // Initiate knockout calls
+    ko.applyBindings(new viewMap());
 }
 
 // Display an alert if Google maps encounters a custom error
@@ -313,7 +314,7 @@ function toggleBounce(poi) {
 }
 
 // Main view model.
-var viewApp = function() {
+var viewMap = function() {
     var self = this;
 
     this.searchItem = ko.observable('');
@@ -326,10 +327,10 @@ var viewApp = function() {
 
     // Filter the places list
     this.locationList = ko.computed(function() {
-                                    var searchFilter = self.searchItem().toLowerCase();
+                                    var searchFilter = self.searchItem().toUpperCase();
                                     if (searchFilter) {
                                     return ko.utils.arrayFilter(self.markerList(), function(location) {
-                                                                var str = location.title.toLowerCase();
+                                                                var str = location.title.toUpperCase();
                                                                 var result = str.includes(searchFilter);
                                                                 location.visible(result);
                                                                 return result;
