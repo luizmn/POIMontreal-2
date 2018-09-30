@@ -75,6 +75,5 @@ Google Maps](http://en.marnoto.com/2014/09/5-formas-de-personalizar-infowindow.h
 * [KnockoutJS: Loading data from AJAX](https://gistpages.com/posts/knockoutjs_loading_data_from_ajax)
 * [jQuery.getJSON() - Ajax Shorthand methods](http://api.jquery.com/jQuery.getJSON/)
 * [Knockout Projections – a plugin for efficient observable array transformations](http://blog.stevensanderson.com/2013/12/03/knockout-projections-a-plugin-for-efficient-observable-array-transformations/)
-* [Trip Advisor - Things to Do in Montreal‎](https://www.tripadvisor.com/Attractions-g155032-Activities-Montreal_Quebec.html)
-* [Best Things To Do in Montreal](https://travel.usnews.com/Montreal_Canada/Things_To_Do/)
-* [Foursquare -Top Picks Montreal](https://pt.foursquare.com/explore?cat=topPicks&mode=url&near=Montreal%2C%20QC%2C%20Canad%C3%A1&nearGeoId=72057594044005179)
+* [Trip Advisor - Things to Do in Manaus](https://www.tripadvisor.com/Attractions-g303235-Activities-Manaus_Amazon_River_State_of_Amazonas.html)
+* [Foursquare -Top Picks Manaus](https://foursquare.com/explore?mode=url&near=Manaus%2C%20AM%2C%20Brazil&nearGeoId=72057594041591453&q=Top%20Picks)

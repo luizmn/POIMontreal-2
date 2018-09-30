@@ -70,131 +70,135 @@ function fsSearch(venueId, infowindow) {
 // ------End get info from foursquare------
 
 // ------Begin Pre-selected markers-------
+// Sets the data for the pre-selected markers consisting of name, latitude,
+// longitude, id from foursquare and z-index;
+// The z-index specifies the stack order of this marker, relative to other
+// markers on the map.
 
 var locations = [{
-                 title: 'The Montreal Museum of Fine Arts',
+                 title: 'Senator Jefferson Peres Park',
                  location: {
-                 lat: 45.498522,
-                 lng: -73.5794
+                 lat: -3.137551,
+                 lng: -60.016035
                  },
-                 fs_id: '4e356969b61cddd1cd3cbba3',
+                 fs_id: '4dcf0a267d8b975f18deea9f',
                  zindex: 1
                  },
                  {
-                 title: 'Mount Royal Park',
+                 title: 'Eduardo Ribeiro Museum',
                  location: {
-                 lat: 45.504798,
-                 lng: -73.587842
+                 lat: -3.130811,
+                 lng: -60.025272
                  },
-                 fs_id: '4ad8f749f964a520871621e3',
+                 fs_id: '4e14c524091a9211bed4db0c',
                  zindex: 2
                  },
                  {
-                 title: 'Mary Queen of the World Cathedral',
+                 title: 'Cultural Center Rio Negro Palace',
                  location: {
-                 lat: 45.494546,
-                 lng: -73.562246
+                 lat: -3.135076,
+                 lng: -60.016868
                  },
-                 fs_id: '4b201c13f964a520532d24e3',
+                 fs_id: '4c41ad2d520fa593bfecc9ac',
                  zindex: 3
                  },
                  {
-                 title: 'Notre-Dame Basilica of Montreal',
+                 title: 'Amazon Theatre',
                  location: {
-                 lat: 45.504542,
-                 lng: -73.556128
+                 lat: -3.130289,
+                 lng: -60.023414
                  },
-                 fs_id: '4b0d9f4ef964a5207a4c23e3',
+                 fs_id: '4bb7be58314e95211ca2479d',
                  zindex: 4
                  },
                  {
-                 title: 'Old Port of Montreal',
+                 title: 'Saint Sebastian Plaza',
                  location: {
-                 lat: 45.507453,
-                 lng: -73.554418
+                 lat: -3.130406,
+                 lng: -60.022523
                  },
-                 fs_id: '4b6a38f5f964a520d8cd2be3',
+                 fs_id: '4b62c956f964a520a7522ae3',
                  zindex: 5
                  },
                  {
-                 title: 'Montreal Botanical Garden',
+                 title: 'Black Point beach',
                  location: {
-                 lat: 45.560002,
-                 lng: -73.563009
+                 lat: -3.063832,
+                 lng: -60.101935
                  },
-                 fs_id: '4ad4c06bf964a520acf920e3',
+                 fs_id: '52faa201498e51f9d0c8fe8b',
                  zindex: 6
                  },
                  {
-                 title: 'Montreal Biodome',
+                 title: 'Amazon Arena',
                  location: {
-                 lat: 45.559737,
-                 lng: -73.549862
+                 lat: -3.083246,
+                 lng: -60.028139
                  },
-                 fs_id: '4ad4c06bf964a520abf920e3',
+                 fs_id: '4e74f5cf45ddd4323f862b3a',
                  zindex: 7
                  },
                  {
-                 title: 'Belvédère Camillien-Houde',
+                 title: 'Amazon Museum',
                  location: {
-                 lat: 45.510798,
-                 lng: -73.592949
+                 lat: -3.003247,
+                 lng: -59.93969
                  },
-                 fs_id: '4c0a7563340720a1bf678693',
+                 fs_id: '4ebc0f78b634c5f658bf71bd',
                  zindex: 8
                  },
                  {
-                 title: 'St. Josephs Oratory',
+                 title: 'Rubber Museum (Seringal Museum)',
                  location: {
-                 lat: 45.492574,
-                 lng: -73.618339
+                 lat: -3.01001,
+                 lng: -60.175459
                  },
-                 fs_id: '4ad4c06cf964a520e7f920e3',
+                 fs_id: '4e0e259945ddc2c6d174f159',
                  zindex: 9
                  },
                  {
-                 title: 'Place-dArmes',
+                 title: 'Meeting of Waters',
                  location: {
-                 lat: 45.505775,
-                 lng: -73.559904
+                 lat: -3.136667,
+                 lng: -59.904722
                  },
-                 fs_id: '4d49a48c11a36ea8d8082a1c',
+                 fs_id: '4e038e3ed22d034599ef8133',
                  zindex: 10
                  },
                  {
-                 title: 'Jean-Talon Market',
+                 title: 'Adolpho Lisboa Municipal Market',
                  location: {
-                 lat: 45.536465,
-                 lng: -73.614671
+                 lat: -3.139919,
+                 lng: -60.023789
                  },
-                 fs_id: '4adb6d0ef964a520522721e3',
+                 fs_id: '4c699646d0bdc9b6375aa60b',
                  zindex: 11
                  },
                  {
-                 title: 'Montreal Holocaust Museum',
+                 title: 'Heliodoro Balbi Plaza',
                  location: {
-                 lat: 45.489022,
-                 lng: -73.636366
+                 lat: -3.135238,
+                 lng: -60.021277
                  },
-                 fs_id: '4ad4c06cf964a52024fa20e3',
+                 fs_id: '4dd3af5dcc3f2f060f28ec6a',
                  zindex: 12
                  },
                  {
-                 title: 'Museum of Archaeology and History',
+                 title: 'Saint Sebastian Church',
                  location: {
-                 lat: 45.502651,
-                 lng: -73.554167
+                 lat: -3.12978,
+                 lng: -60.022635
                  },
-                 fs_id: '4ad4c06cf964a520faf920e3',
+                 fs_id: '4c86b1c8d92ea093ca937072',
                  zindex: 13
                  },
                  {
-                 title: 'Centre d Histoire de Montreal',
+                 title: 'Black River Park',
                  location: {
-                 lat: 45.50102,
-                 lng: -73.555528
+                 lat: -3.128102,
+                 lng: -60.035549
                  },
-                 fs_id: '4ad4c06cf964a52023fa20e3',
+                 fs_id: '5542ad0e498e7afe9358c107',
                  zindex: 14
                  }
                  ];
@@ -206,8 +210,8 @@ function initMap() {
     map = new google.maps.Map(document.getElementById('map'), {
                               zoom: 11,
                               center: {
-                              lat: 45.5016889,
-                              lng: -73.567256
+                              lat: -3.119027,
+                              lng: -60.021731
                               },
                               // Position map controls in the top center
                               mapTypeControl: true,
@@ -219,7 +223,7 @@ function initMap() {
                               fullscreenControl: true
                               });
 
-    // Display an alert if Google maps encounters an error
+    // Display an alert if Google maps encounters an authentication error
     window.gm_authFailure = function() {
         alert('Error detected on Google Maps!');
     }
@@ -248,9 +252,8 @@ var markersList = function(locations) {
     var self = this;
     this.title = locations.title;
     this.position = locations.location;
-    this.fs_id = locations.fs_id,
+    this.fs_id = locations.fs_id;
     this.visible = ko.observable(true);
-
 
 
     this.marker = new google.maps.Marker({
