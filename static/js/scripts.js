@@ -25,19 +25,12 @@ var fs_client_id = "YHMKWSBNT41RJFB5LLCA3WA3BJNMZDKZICQ0V02UD0O0KAZH";
 
 function fsSearch(venueId, infowindow) {
     // Get information using venue id as the main parameter
-    // use this on production
-    /*foursquare_url = "https://api.foursquare.com/v2/venues/" +
+    foursquare_url = "https://api.foursquare.com/v2/venues/" +
     venueId +
     "?v=20180922&client_id=" +
     fs_client_id +
     "&client_secret=" +
-    fs_client_secret;*/
-
-
-    foursquare_url = "https://api.foursquare.com/v2/venues/" +
-    venueId +
-    "?v=20180922&oauth_token=GXAGYHX5KE3JEPUGVPNDWTBZJ4DCUCYBCSTVZGSYIDUED1TU";
-
+    fs_client_secret;
 
     $.getJSON(foursquare_url)
     .done(function(data) {
@@ -240,7 +233,7 @@ function initMap() {
 }
 
 // Display an alert if Google maps encounters a custom error
-function googleMapsCustomError(){
+function googleMapsCustomError() {
     alert('Google Maps custom error triggered');
 }
 
@@ -278,7 +271,6 @@ var markersList = function(locations) {
     this.marker.addListener('click', function() {
                             fsInfowindow(this, infowindow);
                             toggleBounce(this);
-                            //map.panTo(this.getPosition());
                             });
 
     // Open an indowindow when the marker is clicked in the list
