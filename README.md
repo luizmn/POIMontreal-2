@@ -78,3 +78,7 @@ Google Maps](http://en.marnoto.com/2014/09/5-formas-de-personalizar-infowindow.h
 * [Knockout Projections – a plugin for efficient observable array transformations](http://blog.stevensanderson.com/2013/12/03/knockout-projections-a-plugin-for-efficient-observable-array-transformations/)
 * [Trip Advisor - Things to Do in Manaus](https://www.tripadvisor.com/Attractions-g303235-Activities-Manaus_Amazon_River_State_of_Amazonas.html)
 * [Foursquare -Top Picks Manaus](https://foursquare.com/explore?mode=url&near=Manaus%2C%20AM%2C%20Brazil&nearGeoId=72057594041591453&q=Top%20Picks)
+* [Favicon Generator](https://www.favicon.cc/)
+* [Udacity Frontend Nanodegree Style Guide](http://udacity.github.io/frontend-nanodegree-styleguide/javascript.html)
+* [Google Maps Logo](https://localcave.com/blog-de-viagem/aplicativos-de-viagem/google-maps-logo/)
+* [Foursquare logo](https://www.dropbox.com/sh/webqiiog37nr3n9/AABXw51LfqDEKPMr7DJDU1KLa?dl=0)

@@ -23,6 +23,18 @@ var fs_client_id = "YHMKWSBNT41RJFB5LLCA3WA3BJNMZDKZICQ0V02UD0O0KAZH";
 
 // ------Begin get info from foursquare------
 
+/**
+ * @description Function used to get info from foursquare
+ * @constructor
+ * @param {string} fs_title - The title of Venue/place
+ * @param {string} fs_category - Category of Venue/place
+ * @param {string} fs_address - Just the first line of address
+ * @param {string} fs_url - Foursquare url of the place
+ * @param {string} fs_prefix - Image prefix from foursquare
+ * @param {string} fs_suffix - Image suffix from foursquare
+ * Image from Foursquare is displayed in this way: fs_prefix + size of the image + fs_suffix
+ */
+
 function fsSearch(venueId, infowindow) {
     // Get information using venue id as the main parameter
     foursquare_url = "https://api.foursquare.com/v2/venues/" +
